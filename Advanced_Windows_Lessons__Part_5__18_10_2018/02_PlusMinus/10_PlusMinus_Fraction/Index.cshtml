@@ -1,0 +1,25 @@
+﻿@model PlusMinus_Fraction.Models.myModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "My"))
+{ 
+<div>
+    @Html.TextBox("firstFraction.num")
+    /
+    @Html.TextBox("firstFraction.denom")
+    <input type="submit" name="myButton" value="+" />
+    <input type="submit" name="myButton" value="-" />
+    @Html.TextBox("secondFraction.num")
+    /
+    @Html.TextBox("secondFraction.denom")
+     =
+    @if (Model.resultFraction != null) 
+    {
+        @Html.Label(Model.resultFraction.num.ToString())
+        @Html.Label("/")
+        @Html.Label(Model.resultFraction.denom.ToString())   
+    }
+</div>
+}

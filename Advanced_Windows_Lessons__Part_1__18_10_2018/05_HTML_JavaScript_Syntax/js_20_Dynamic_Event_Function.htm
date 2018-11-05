@@ -1,0 +1,27 @@
+<html>
+
+<script language="JavaScript">
+
+function openWin3() {
+  var myWin= open("");
+
+  myWin.document.write("<html> <body>");
+  myWin.document.write("<SCRIPT language='JavaScript'> function plus() { var res = parseInt(document.myForm.myText_1.value) + parseInt(document.myForm.myText_2.value);	document.myForm.myText_3.value = res;} <\/SCRIPT>") 
+
+  myWin.document.write("<form name='myForm'>");
+  myWin.document.write("<input type='text' name='myText_1'>");
+  myWin.document.write("<input type='button' name='mybutton' value='+' onClick='plus()'>");
+  myWin.document.write("<input type='text' name='myText_2'>");
+  myWin.document.write("=");
+  myWin.document.write("<input type='text' name='myText_3' readonly = 'true'>");
+  myWin.document.write("</form> </body> </html>");
+
+  myWin.document.close();  
+}
+</script>
+
+
+<form>
+<input type=button value="On-the-fly" onClick="openWin3()">
+</form>
+</html>

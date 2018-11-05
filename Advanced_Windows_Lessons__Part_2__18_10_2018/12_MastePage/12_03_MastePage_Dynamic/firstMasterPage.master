@@ -1,0 +1,32 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="firstMasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%">
+            <tr>
+                <td bgcolor="green">
+                First Master Page
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="yellow">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        &nbsp;</div>
+    </form>
+</body>
+</html>

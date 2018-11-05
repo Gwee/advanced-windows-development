@@ -1,0 +1,40 @@
+<html>
+
+<script> 
+
+function Init(){
+  var myButton = document.createElement('input');
+  myButton.type = 'button';
+  myButton.Id = 'myButton_Id';
+  myButton.name = 'A';
+  myButton.value = 'A';
+  myButton.style.width = '40';
+  myButton.style.height = '40';
+  document.body.appendChild(myButton);
+  /// myButton.onclick = myButton_Click; 
+  /// document.body.children[0].onclick = myButton_Click;
+
+  myButton.addEventListener("click",myButton_Click);
+
+//	myButton.addEventListener("click", function(){
+//		alert("");
+//	});
+
+//   myButton.removeEventListener("click",myButton_Click);
+}
+
+function myButton_Click(e){
+    alert("Hello, world!");
+
+    var sender = e.srcElement;
+//        alert(sender.Id);
+    sender.removeEventListener("click", myButton_Click); 
+}
+
+
+window.onload = Init;
+
+</script>
+<body>
+</body>
+</html>

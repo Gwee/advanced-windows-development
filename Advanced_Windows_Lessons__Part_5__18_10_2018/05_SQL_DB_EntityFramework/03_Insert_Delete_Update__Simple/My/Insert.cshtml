@@ -1,0 +1,19 @@
+﻿@model MVC_SQL_DB.Models.Employee
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("InsertAction", "My"))
+{ 
+<div>
+    Insert New First Name
+    <br>
+    @Html.TextBox("firstName")
+    <br>
+    Insert New Last Name
+    <br>
+    @Html.TextBox("lastName")
+    <br>
+    <input type="submit" value="OK" />
+</div>
+}

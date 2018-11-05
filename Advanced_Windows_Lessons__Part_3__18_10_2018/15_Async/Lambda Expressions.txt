@@ -1,0 +1,46 @@
+delegate int action(int a, int b);
+static public int plusFunction(int a, int b)
+{
+	return a + b;
+}
+static void Main()
+{
+	action plus = new action(plusFunction);
+	Console.WriteLine(plus(1, 2));
+}
+------------------------------------------------ 
+delegate int action(int a, int b);
+static void Main()
+{
+	action plus = (a, b) => a + b;
+	Console.WriteLine(plus (1, 2));
+}
+------------------------------------------------ 
+///// Delegate System.Func(T, TResult) 
+
+static public int plusFunction(int a, int b)
+{
+	return a + b;
+}
+static void Main()
+{
+	Func<int, int, int> plus = plusFunction;
+	Console.WriteLine(plus(1, 2));
+}
+------------------------------------------------
+static void Main()  
+{
+	Func<int, int, int> plus = (a, b) => a + b;
+	Console.WriteLine(plus(1, 2));
+}
+------------------------------------------------ 
+static void Main()
+{
+	Func<int, int, int> plusMinus = (a, b) =>
+	{
+                Console.WriteLine(a - b);
+                return a + b;
+	};
+	Console.WriteLine(plusMinus(1, 2));
+}
+------------------------------------------------ 

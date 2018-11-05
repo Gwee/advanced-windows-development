@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Advertisements>
+    <Ad>
+       <ImageUrl>wrox.gif</ImageUrl>
+       <NavigateUrl>http://www.wrox.com</NavigateUrl>
+       <AlternateText>Wrox Press</AlternateText>
+       <Impressions>1</Impressions>
+       <Keyword>book</Keyword>
+     </Ad>
+     <Ad>
+       <ImageUrl>ms.gif</ImageUrl>
+       <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+       <AlternateText>MS</AlternateText>
+       <Impressions>3</Impressions>
+       <Keyword>software</Keyword>
+     </Ad>
+     <Ad>
+      <ImageUrl>cheese.gif</ImageUrl>
+       <NavigateUrl>http://www.tnuva.co.il</NavigateUrl>
+       <AlternateText>Tnuva</AlternateText>
+       <Impressions>1</Impressions>
+       <Keyword>food</Keyword>
+     </Ad>
+</Advertisements>

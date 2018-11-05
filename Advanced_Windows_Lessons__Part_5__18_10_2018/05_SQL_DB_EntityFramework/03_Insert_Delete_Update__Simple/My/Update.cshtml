@@ -1,0 +1,21 @@
+﻿@model MVC_SQL_DB.Models.Employee
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("UpdateAction", "My"))
+{ 
+<div>
+    @Html.Hidden("id")
+    Update First Name
+    <br>
+    @Html.TextBox("firstName")
+    <br>
+    Update Last Name
+    <br>
+    @Html.TextBox("lastName")
+    <br>
+    <input type="submit" value="OK" />
+</div>
+}
+

@@ -1,0 +1,37 @@
+<html>								  
+<script language="JavaScript">
+
+document.onmousedown = mouseDownFunction;
+document.onmouseup = mouseUpFunction;
+
+var offsetX = 0;
+var offsetY = 0;
+var selectedObj = null;
+
+function mouseDownFunction() {
+    	selectedObj = event.srcElement;
+    	if (selectedObj) {
+        		document.onmousemove = mouseMoveFunction;
+        		offsetX = event.offsetX;
+        		offsetY = event.offsetY;
+    	}
+}
+function mouseUpFunction() {
+        document.onmousemove = null;
+        selectedObj = null;
+}
+function mouseMoveFunction() {
+    	if (selectedObj) {
+		selectedObj.style.pixelLeft = event.clientX - offsetX; 
+		selectedObj.style.pixelTop = event.clientY - offsetY; 
+        		return false;
+    	}
+}
+</script>
+
+<body>
+<img ID="myFlower" SRC="Flower.jpg" style="top:20; left: 70; position: absolute">
+<img ID="myDog" SRC="dog.jpg" style="top:20; left: 370; position: absolute">
+<input type="text" ID="myText" style="top:270; left: 70; position: absolute">
+<input type="button" value="myButton" ID="myButton" style="top:270; left: 270; position: absolute">
+</body>  </html>

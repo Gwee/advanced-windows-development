@@ -1,0 +1,3 @@
+<asp:TextBox runat="server" Font-Size="Medium" ForeColor="Red" BackColor="Yellow" />
+<asp:Button runat="server" Font-Size="Medium" ForeColor="Green" BackColor="Yellow" />
+<asp:Label runat="server" Font-Size="Medium" ForeColor="Blue" BackColor="Yellow" />

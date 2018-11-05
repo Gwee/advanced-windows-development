@@ -1,0 +1,33 @@
+<html>
+   <body>
+      <script language="javascript">
+
+	var myStructure = { 
+     		myInt     :   123456, 
+     		myDouble  :   11.223344, 
+     		myString  :   "Hello, world",
+		myArray   :   [
+		     {	str   : "aa",
+			value :  25
+		     },
+		     {	str   : "bb",
+			value :  28
+		     }
+		],
+		myFunction : function(index)
+		{
+			document.write( this.myArray[index].str + "  " 
+			+ this.myArray[index].value.toString() + "<br>");
+		}
+	};
+
+	document.write(   myStructure.myInt.toString()  + "  " 
+			+ myStructure.myDouble.toString() + "  "
+  			+ myStructure.myString + "<br>" ); 
+	    
+	myStructure.myFunction(0);
+	myStructure.myFunction(1);
+       
+	</script>
+    </body>
+</html>

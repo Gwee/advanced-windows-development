@@ -1,0 +1,54 @@
+<html>
+   <body>
+      <script language="javascript">
+
+	function Fraction(n, d) 
+	{
+		this.num = n || 0;
+		this.denom = d || 1;
+		this.Plus = Plus;
+		this.Show = Show;
+ 	}
+	function Show() 
+	{
+	    document.write(this.num.toString() + "/" + this.denom.toString() +"<br>");
+ 	}
+	function Plus(A) 
+	{
+		return new Fraction(this.num * A.denom + this.denom * A.num, this.denom * A.denom);
+ 	}
+//--------------------------
+	
+	function Fraction_with_Color_and_Max(n, d, c) 
+	{
+		this.base = Fraction;
+		this.base(n, d);
+		
+		this.color = c || 0;
+		this.Max = Max;
+		this.Show_and_Color = Show_and_Color;
+ 	}
+	function Show_and_Color() 
+	{
+	    this.Show();
+	    document.write(this.color.toString() +"<br>");
+ 	}
+	function Max(A) 
+	{
+		if(this.num * A.denom - this.denom * A.num > 0)
+			return this;
+		return A;
+ 	}
+
+	var A_Fraction_with_Color_and_Max = new Fraction_with_Color_and_Max(1, 2, 3);
+	var B_Fraction_with_Color_and_Max = new Fraction_with_Color_and_Max(4, 5, 6);
+	var C_Fraction_with_Color_and_Max;
+	A_Fraction_with_Color_and_Max.Show_and_Color();
+	B_Fraction_with_Color_and_Max.Show_and_Color();
+
+	C_Fraction_with_Color_and_Max = A_Fraction_with_Color_and_Max.Max(B_Fraction_with_Color_and_Max);
+	C_Fraction_with_Color_and_Max.Show_and_Color();
+
+       </script>
+    </body>
+</html>

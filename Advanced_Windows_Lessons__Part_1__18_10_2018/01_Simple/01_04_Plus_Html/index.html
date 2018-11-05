@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+    <script language="javascript">
+        function ButtonClick() {
+            var arg_1 = parseInt(document.getElementById('Text1').value);
+            var arg_2 = parseInt(document.getElementById('Text2').value);
+            document.getElementById('Label1').innerText = (arg_1 + arg_2).toString();
+  	    }
+	</script>	
+
+<body>
+    <p>
+        <input id="Text1" type="text" />
+        +
+        <input id="Text2" type="text" />
+        <input id="Button1" type="button" value="=" onclick="ButtonClick()" />
+        <label id="Label1" />
+    </p>
+
+</body>
+</html>

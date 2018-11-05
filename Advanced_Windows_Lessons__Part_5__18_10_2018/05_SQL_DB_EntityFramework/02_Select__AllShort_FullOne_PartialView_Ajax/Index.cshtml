@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Select__AllShort_FullOne_PartialView_Ajax.Models.Employee>
+
+<div>
+    <h2>Employees</h2>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td><input type="hidden" id="id_@m.id" value="@m.id" /></td>
+                <td><input type="button" value="OK" onClick="FullOne(this)"></td>
+                <td>@m.firstName</td>
+                <td>@m.lastName</td>
+            </tr>}
+    </table>
+    <div id="FullList">
+    </div>
+</div>
+
+<script type="text/javascript">
+    var xmlHttp;
+    window.onload = function () {
+        if (window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if (window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+    }
+
+    function FullOne(myBytton) {
+        myRow = myBytton.parentNode.parentNode;
+        var ID = myRow.cells[0].childNodes[0].value;
+
+        var nyJsonObject = new Object();
+        nyJsonObject.ID = ID;
+        var myJsonStr = JSON.stringify(nyJsonObject);
+        var url = '@Url.Action("Select_FullOne", "My")';
+        xmlHttp.open("POST", url, true);
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+        xmlHttp.onreadystatechange = getResponse;
+        xmlHttp.send(myJsonStr);
+    }
+    function getResponse() {
+//        alert(xmlHttp.readyState);
+        if (xmlHttp.readyState==4) {
+            //           alert(xmlHttp.responseText);
+            var temp = document.getElementById("FullList");
+            temp.innerHTML = xmlHttp.responseText;
+        }
+    }
+
+</script>
+
+

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style type=text/css>
+        .buttonInTable{       
+		    background: #FFFFFF;        
+		    font-family: Arial;       
+		    font-size: XX-Large;        
+		    width: 60px;       
+		    height: 60px;        
+	    }  
+        table {
+            border-collapse: collapse;
+        }
+
+    </style>
+
+	
+</head>
+<body>
+    <div>
+   <table> 
+        @for (int i = 0; i < 4; i++)
+        {
+            @: <tr>
+            for (int j = 0; j < 4; j++)
+            {
+                @: <td>
+                <input type="button" id="@(4 * i + j)" value="" onClick="myClick()" class='buttonInTable'/>
+                @: </td>
+            }
+            @:<tr>
+        }
+  </table>  
+       
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var xmlHttp;
+    window.onload = function () {
+        if (window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if (window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+
+        Init();
+    }
+
+    function Init() {
+        var url = '@Url.Action("InitAction", "My")';
+        xmlHttp.open("GET", url, true);
+        xmlHttp.onreadystatechange = getResponseInit;
+        xmlHttp.send();
+    }
+    function getResponseInit() {
+        if (xmlHttp.readyState == 4) {
+            //  alert(xmlHttp.responseText);
+
+            result = eval('(' + xmlHttp.responseText + ')');
+            for (var i = 0; i < 16; i++)
+                
+		document.getElementById(i).value = result[i];
+        }
+    }
+
+    function myClick() {
+        alert(event.srcElement.value)
+    }
+</script>

@@ -1,0 +1,52 @@
+<html>
+   <body>
+      <script language="javascript">
+
+	function Fraction(n, d) 
+	{
+		this.num = n || 0;
+		this.denom = d || 1;
+		this.Plus = Plus;
+		this.Show = Show;
+ 	}
+	function Show() 
+	{
+	    	document.write(this.num.toString() + "/" + this.denom.toString() +"<br>");
+ 	}
+	function Plus(A) 
+	{
+		return new Fraction(this.num * A.denom + this.denom * A.num, this.denom * A.denom);
+ 	}
+<!--   -------------------------------   -->
+
+	function arrayPlus(A, B) 
+	{	
+		var arrayResult = new Array();
+		for( var i = 0; i < A.length; i++)
+			arrayResult[ i ] = A[ i ].Plus( B[ i ]);
+		return arrayResult;
+ 	}
+	function ShowArray(A) 
+	{	
+		for( var i = 0; i < A.length; i++)
+			A[ i ].Show() ;
+	}
+
+
+	var arrayA = new Array();
+	var arrayB = new Array();
+	var arrayC;
+
+	arrayA[0] = new Fraction(1, 2);
+	arrayA[1] = new Fraction(2, 3);
+
+	arrayB[0] = new Fraction(3, 4);
+	arrayB[1] = new Fraction(4, 5);
+
+
+	arrayC = arrayPlus(arrayA, arrayB);
+	ShowArray( arrayC );
+
+       </script>
+    </body>
+</html>

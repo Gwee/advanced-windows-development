@@ -1,0 +1,37 @@
+<html>
+
+<script language="JavaScript">
+
+function plus() {
+	var res = parseInt(document.myForm.myText_1.value) + parseInt(document.myForm.myText_2.value);
+ 	document.getElementById("myResult").innerText = res;
+ 	document.getElementById("myLabel").innerText = res;
+
+
+}
+
+</script>
+
+<form name="myForm">
+
+<input type="text" name="myText_1" style="top:70; left: 70; position: absolute">
+
+<DIV style="top:100; left: 100; position: absolute">
+<input type="button" name="mybutton" value="+"
+  onClick="plus()">
+<input type="text" name="myText_2">
+</DIV>
+
+<DIV style="top:130; left: 160; position: absolute">
+=
+</DIV>
+
+<DIV  id="myResult" style="top:160; left: 190; width:200; background-color:#00FF00; position: absolute">
+</DIV>
+<label  id="myLabel" style="top:190; left: 190; width:200; background-color:#FF0000; position: absolute">
+</label>
+
+
+</form>
+
+</html>

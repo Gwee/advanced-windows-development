@@ -1,0 +1,22 @@
+﻿body 
+{
+   	font-family: Arial;
+   	font-size:large;
+   	color:Blue;
+   	background: Olive
+}
+.myStyle1
+{
+	font-weight: bold;
+ 	font-size: xx-large;
+	color:  Purple;
+   	background: Yellow;
+}
+.myStyle2
+{
+	font-weight: lighter;
+	font-size:  xx-small;
+	font-style: italic;
+	color: Yellow;
+   	background: Green;
+}

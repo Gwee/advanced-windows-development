@@ -1,0 +1,39 @@
+<html>
+
+<script language="JavaScript">
+
+function myClick() {
+ 	document.getElementById("myLabel").innerText = document.getElementById("myText").value;
+}
+function myAlert() {
+ 	alert(document.getElementById("myText").value);
+}
+function myConfirm() {
+	var r = confirm("Press a button");
+	if (r == true) 
+    		document.getElementById("myLabel").innerText = document.getElementById("myText").value;
+	else 
+		document.getElementById("myLabel").innerText = "aaaaaaaaaaaaaaaaaaaaaaa";
+}
+function myPrompt() {
+	var r = prompt("Press a button");
+	if (r != null) 
+    		document.getElementById("myLabel").innerText = r;
+	else 
+		document.getElementById("myLabel").innerText = document.getElementById("myText").value;
+}
+
+
+</script>
+
+<form name="myForm">
+	<input type="text" id="myText"/>
+	<input type="button" value="OK" onClick="myClick()"/>
+	<input type="button" value="Alert" onClick="myAlert()"/>
+	<input type="button" value="Confirm" onClick="myConfirm()"/>
+	<input type="button" value="Prompt" onClick="myPrompt()"/>
+
+	<label  id="myLabel" />
+</form>
+
+</html>

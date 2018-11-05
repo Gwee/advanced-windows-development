@@ -1,0 +1,36 @@
+<html>
+   <body>
+      <script language="javascript">
+
+	var myJsonObject = {
+        	arrFraction  :  [ { num : 0, denom : 1 },
+                          	{ num : 0, denom : 1 },
+                          	{ num : 0, denom : 1 }
+        	],
+		assigment : function(index, n, d)
+		{
+			myJsonObject.arrFraction[index].num = n || 0;
+			myJsonObject.arrFraction[index].denom = d || 1;
+ 		},
+		Plus : function()
+		{
+			this.arrFraction[2].num = this.arrFraction[0].num * this.arrFraction[1].denom +
+			    this.arrFraction[1].num * this.arrFraction[0].denom; 
+			this.arrFraction[2].denom = this.arrFraction[0].denom * this.arrFraction[1].denom;
+ 		}, 
+		Show : function(index) 
+		{
+            document.write(this.arrFraction[index].num .toString() + "/" + this.arrFraction[index].denom.toString() +"<br>");
+ 		}	
+	};
+
+	myJsonObject.assigment (0, 1, 2);
+	myJsonObject.assigment (1, 3, 4);
+	myJsonObject.Show(0);
+	myJsonObject.Show(1);
+	myJsonObject.Plus(); 
+	myJsonObject.Show(2);
+
+	</script>
+    </body>
+</html>

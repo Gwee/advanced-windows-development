@@ -1,0 +1,28 @@
+<html>
+
+<script language="JavaScript">
+
+function plus_1() {
+	var res = parseInt(document.myForm.myText_1.value) + parseInt(document.myForm.myText_2.value);
+ 	////document.myForm.myText_3.value = res;
+	document.getElementById("myText_3").value = res;
+}
+function plus_2(a, b) {
+	var res = parseInt(a) + parseInt(b);
+ 	document.myForm.myText_3.value = res;
+}
+
+</script>
+
+<form name="myForm">
+<input type="text" name="myText_1">
+<input type="button" name="mybutton" value="+"
+  onClick="plus_1()">
+<input type="button" name="mybutton_1" value="+"
+  onClick="plus_2(myText_1.value, myText_2.value )">
+<input type="text" name="myText_2">
+=
+<input type="text" name="myText_3" readonly = "true">
+</form>
+
+</html>

@@ -1,0 +1,20 @@
+﻿@model PlusMinus_int.Models.myModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "My"))
+{ 
+    <div>
+    @Html.TextBox("num1")
+    <input type="submit" name="Plus" value="+" />
+    <input type="submit" name="Minus" value="-" />
+     @Html.TextBox("num2")
+    = 
+    @if (ViewBag.result != null) 
+    {
+        <script>alert("@ViewBag.result");</script>
+         @ViewBag.result
+    } 
+</div>
+}

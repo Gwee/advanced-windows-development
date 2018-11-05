@@ -1,0 +1,49 @@
+<html>
+
+<script language="JavaScript">
+
+function Init()
+{
+    var new_tbody = document.createElement("tbody");
+
+    var new_row, new_col ;
+    var counter = 1;                
+    for(var row=0; row < 4;row++)
+    {
+        new_row = document.createElement("tr");
+        for(var col=0;col<4;col++)
+        {
+            new_col = document.createElement("td");
+
+            var myButton = document.createElement('input');
+  		    myButton.type = 'button';
+	            myButton.value = counter.toString();
+		    myButton.style.width = '50';
+		    myButton.style.height = '50';
+		    myButton.style.fontSize = 'X-Large';
+  		    myButton.onclick = function () { myClick( this);};
+  		    new_col.appendChild(myButton);
+       		    
+            counter ++;
+     
+            new_row.appendChild(new_col);
+        }
+       new_tbody.appendChild(new_row);
+    }
+    divTable.appendChild(new_tbody);
+}
+
+function myClick(clickedButton) 
+{
+alert(clickedButton.value.toString());
+}
+
+
+window.onload = Init;
+</script>
+
+<form>
+<table id="divTable">        
+</table>
+</form>
+</html>

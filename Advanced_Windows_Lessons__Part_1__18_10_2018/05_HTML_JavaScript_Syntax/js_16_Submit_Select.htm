@@ -1,0 +1,29 @@
+<html>
+
+<script language="JavaScript">
+
+function loadDocument(site) {
+	switch(site)
+	{
+		case 0: return;
+		case 1: window.location.href="http://www.microsoft.com";
+			break;
+		case 2: window.location.href="http://www.wrox.com";
+			break;
+	}
+}
+
+</script>
+
+<body>
+<form name="myForm" action="http://www.teva.co.il">
+	<select onChange="loadDocument(selectedIndex)">
+        	<option>Load Site</option>
+        	<option>Microsoft</option>
+        	<option>Wrox</option>
+    	</select>	
+	<input type="submit" id="mySubmit" value="Submit">	
+</form>
+
+</body>
+</html>

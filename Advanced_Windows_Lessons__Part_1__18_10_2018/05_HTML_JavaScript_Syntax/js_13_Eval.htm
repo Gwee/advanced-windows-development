@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+    <script type="text/javascript">
+        function myClick() {
+            var data = document.getElementById("Text1").value;
+            var res = eval(data);
+            document.getElementById("Div1").innerText = res;
+        }
+    </script>
+<body>
+    <input id="Text1" type="text" value="((1 + 2) * 5 - 3) * 2"  />
+    <br/>
+    <input id="Button1" type="button" value="button"  onclick="myClick()"/>
+    <div  id="Div1"> </div>
+</body>
+</html>

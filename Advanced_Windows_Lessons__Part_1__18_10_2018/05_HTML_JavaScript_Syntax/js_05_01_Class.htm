@@ -1,0 +1,35 @@
+<html>
+   <body>
+      <script language="javascript">
+
+	function Fraction(n, d) 
+	{
+		this.num = n || 0;
+		this.denom = d || 1;
+		this.Plus = Plus;
+		this.Show = Show;
+ 	}
+	function Show() 
+	{
+	    	document.write(this.num.toString() + "/" + this.denom.toString() +"<br>");
+ 	}
+	function Plus(A) 
+	{
+		return new Fraction(this.num * A.denom + this.denom * A.num, this.denom * A.denom);
+ 	}
+
+	var A_Fraction = new Fraction(1, 2);
+	var B_Fraction = new Fraction(3, 4);
+	var C_Fraction;
+//	var C_Fraction = new Fraction();
+//	C_Fraction.Show();
+
+	A_Fraction.Show();
+	B_Fraction.Show();
+
+	C_Fraction = A_Fraction.Plus(B_Fraction);
+	C_Fraction.Show();
+
+       </script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+E:\MY_CSharp_Advanced\Lessons  NEW  NEW  NEW\01_Simple\00_03_Plus_WebApplication\Plus_WebApplication\bin\Plus_WebApplication.dll
+E:\MY_CSharp_Advanced\Lessons  NEW  NEW  NEW\01_Simple\00_03_Plus_WebApplication\Plus_WebApplication\bin\Plus_WebApplication.pdb
+E:\MY_CSharp_Advanced\Lessons  NEW  NEW  NEW\01_Simple\00_03_Plus_WebApplication\Plus_WebApplication\obj\Release\Plus_WebApplication.csprojResolveAssemblyReference.cache
+E:\MY_CSharp_Advanced\Lessons  NEW  NEW  NEW\01_Simple\00_03_Plus_WebApplication\Plus_WebApplication\obj\Release\Plus_WebApplication.dll
+E:\MY_CSharp_Advanced\Lessons  NEW  NEW  NEW\01_Simple\00_03_Plus_WebApplication\Plus_WebApplication\obj\Release\Plus_WebApplication.pdb

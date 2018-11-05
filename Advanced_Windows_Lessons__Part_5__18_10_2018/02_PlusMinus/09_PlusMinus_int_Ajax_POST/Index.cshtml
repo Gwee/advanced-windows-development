@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+@using (Html.BeginForm("Index", "My"))
+{ 
+<div>
+     @Html.TextBox("num1")
+    <input type="button" value="Plus" onClick="myPlusMinus()">
+    <input type="button" value="Minus" onClick="myPlusMinus()">
+     @Html.TextBox("num2")
+     =
+     <label id="labelResult"></label>
+</div>
+}        
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var xmlHttp;
+    window.onload = function () {
+        if (window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if (window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+    }
+    function myPlusMinus() {
+        // alert(event.srcElement.value)
+
+        var nyJsonObject = new Object();
+        nyJsonObject.num1 = document.getElementById('num1').value;
+        nyJsonObject.num2 = document.getElementById('num2').value;
+        nyJsonObject.action = event.srcElement.value;
+
+        var myJsonStr = JSON.stringify(nyJsonObject);
+        var url = '@Url.Action("PlusMinusAction", "My")';
+        xmlHttp.open("POST", url, true);
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+        xmlHttp.onreadystatechange = getResponsePlusMinus;
+        xmlHttp.send(myJsonStr);
+    }
+    function getResponsePlusMinus() {
+        if (xmlHttp.readyState == 4) {
+            // alert(xmlHttp.responseText);
+            document.getElementById("labelResult").innerText = xmlHttp.responseText;
+        }
+    }
+</script>

@@ -1,0 +1,24 @@
+﻿@model PlusMinus_int.Models.myModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "My"))
+{ 
+<div>
+ @Html.TextBox("num1")
+    <input type="submit" name="myButton" value="+" />
+    <input type="submit" name="myButton" value="-" />
+     @Html.TextBox("num2")
+    =
+    <label id ="myLabel" />
+</div>
+}
+
+<script type="text/javascript">
+    @if (ViewBag.result != null) 
+    {
+        @: alert(@ViewBag.result)
+        @: document.getElementById("myLabel").innerText = @ViewBag.result      
+    }
+</script>

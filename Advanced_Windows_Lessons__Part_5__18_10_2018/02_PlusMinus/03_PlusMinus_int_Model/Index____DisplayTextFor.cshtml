@@ -1,0 +1,16 @@
+﻿@model PlusMinus_int.Models.myModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "My"))
+{ 
+<div>
+    @Html.TextBoxFor(m => m.num1)
+    <input type="submit" name="myButton" value="+" />
+    <input type="submit" name="myButton" value="-" />
+    @Html.TextBoxFor(m => m.num2)
+     =
+    @Html.DisplayTextFor(m => m.result) 
+</div>
+}

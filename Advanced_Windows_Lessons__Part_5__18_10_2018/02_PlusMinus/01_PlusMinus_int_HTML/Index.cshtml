@@ -1,0 +1,15 @@
+﻿@model PlusMinus_int.Models.myModel
+@{
+    Layout = null;
+}
+
+<form method="post" action="/My/Index">   
+<div>
+    <input type="text" name="num1" value="@Model.num1"/>
+    <input type="submit" name="myButton" value="+" />
+    <input type="submit" name="myButton" value="-" />
+    <input type="text" name="num2" value="@Model.num2"/>
+     =
+    <label> @Model.result</label>
+</div>
+</form>

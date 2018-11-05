@@ -1,0 +1,48 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        My Header
+        <table>
+            <tr>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+                <td style="width: 3px">
+                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" /></td>
+                <td style="width: 165px">
+                    <asp:Label ID="Label1" runat="server" Width="165px" BackColor="#FFFFC0"></asp:Label></td>
+            </tr>
+        </table>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <br />
+            <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
+            <br />
+            <asp:Label ID="Label3" runat="server" Width="210px" BackColor="#80FF80"></asp:Label></asp:contentplaceholder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox><br />
+            <asp:Button ID="Button4" runat="server" Text="Button" OnClick="Button3_Click" /><br />
+            <asp:Label ID="Label4" runat="server" BackColor="#80FF80" Width="210px"></asp:Label></asp:ContentPlaceHolder>
+        <br />
+        My Footer
+        <table>
+            <tr>
+                <td style="height: 26px">
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+                <td style="width: 3px; height: 26px;">
+                    <asp:Button ID="Button2" runat="server" Text="Button" OnClick="Button2_Click" /></td>
+                <td style="width: 181px; height: 26px;">
+                    <asp:Label ID="Label2" runat="server" Width="165px" BackColor="Cyan" BorderColor="White"></asp:Label></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

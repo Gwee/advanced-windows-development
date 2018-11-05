@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script language="javascript">
+    function getMouseXY() {
+        //var tempX = event.screenX;
+        //var tempY = event.screenY;
+
+        var tempX = event.clientX;
+        var tempY = event.clientY;
+
+        //var tempX = event.offsetX;
+        //var tempY = event.offsetY;
+
+            document.getElementById("text_X").value = tempX;
+            document.getElementById("text_Y").value = tempY;
+     }
+  </script>
+
+<body >
+X <input type="text" ID="text_X" value="0" size="4">   <br>
+Y <input type="text" ID="text_Y" value="0" size="4">
+<input type="button" value="Button" style="height:200px; width:200px" 
+onmousemove="getMouseXY()" />
+</body>
+</html>

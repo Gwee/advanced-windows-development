@@ -1,0 +1,61 @@
+﻿@model PlusMinus_Fraction.Models.myModel
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("Index", "My"))
+{ 
+<div>
+    @Html.TextBox("firstFraction.num") 
+    /
+    @Html.TextBox("firstFraction.denom")
+    <input type="button"  value="Plus" onClick="myPlusMinus()">
+    <input type="button"  value="Minus" onClick="myPlusMinus()">
+    @Html.TextBox("secondFraction.num")
+    /
+    @Html.TextBox("secondFraction.denom")
+     =
+    <label id="numResult"></label>
+    /
+    <label id="denomResult"></label>
+</div>
+}
+<script type="text/javascript">
+
+    var xmlHttp;
+    window.onload = function () {
+        if (window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if (window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+    }
+    function myPlusMinus() {
+        // alert(event.srcElement.value)
+
+        var nyJsonObject = new Object();
+        nyJsonObject.firstFraction = new Object();
+        nyJsonObject.firstFraction.num = document.getElementsByName("firstFraction.num")[0].value
+        nyJsonObject.firstFraction.denom = document.getElementsByName("firstFraction.denom")[0].value
+        nyJsonObject.secondFraction = new Object();
+        nyJsonObject.secondFraction.num = document.getElementsByName("secondFraction.num")[0].value
+        nyJsonObject.secondFraction.denom = document.getElementsByName("secondFraction.denom")[0].value
+        nyJsonObject.action = event.srcElement.value;
+
+        var myJsonStr = JSON.stringify(nyJsonObject);
+        //    alert(myJsonStr);
+        var url = '@Url.Action("PlusMinusAction", "My")';
+            xmlHttp.open("POST", url, true);
+            xmlHttp.setRequestHeader('Content-Type', 'application/json');
+            xmlHttp.onreadystatechange = getResponsePlusMinus;
+            xmlHttp.send(myJsonStr);
+        }
+        function getResponsePlusMinus() {
+            if (xmlHttp.readyState == 4) {
+                //  alert(xmlHttp.responseText);
+                var tempJSON_Object = eval('(' + xmlHttp.responseText + ')');
+                document.getElementById('numResult').innerText = tempJSON_Object.num;
+                document.getElementById('denomResult').innerText = tempJSON_Object.denom;
+            }
+        }
+
+</script>

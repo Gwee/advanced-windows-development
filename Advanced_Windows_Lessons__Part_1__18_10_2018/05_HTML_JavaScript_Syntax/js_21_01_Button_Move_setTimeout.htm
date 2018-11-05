@@ -1,0 +1,36 @@
+<html>
+	<script language="javascript">
+	function myFunction1(a) {
+	    var myButton = document.getElementById('myButton');
+	    for(var i= 0; i < a; i++)
+		setTimeout(function () {
+			myButton.style.pixelLeft += 3;
+		}, i * 10);
+	}
+	
+	function myFunction2(a) 
+	{
+	    if (a == 0)
+	        return;
+	    var myButton = document.getElementById('myButton');
+	    myButton.style.pixelLeft += 3;
+	    setTimeout('myFunction2(' + (a - 1).toString() + ')', 10);
+	}
+
+			
+	function onClickFunction()
+	{
+	        myFunction1(100);
+//	        myFunction2(100);
+	}
+	
+	</script>    
+
+
+
+	<body 
+	<form>
+		<input type="button" id="myButton" value="Click me" onclick="onClickFunction()" style="top:20; left: 20; position: absolute">
+	</form>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+
+<script language="JavaScript">
+
+function Name_Telephon() {
+	var result = window.showModalDialog("js_19_2_Dialog_Window.htm", ['Name', 'Telephon']);
+ 	document.myForm.Name_Text.value = result[0];
+ 	document.myForm.Telephon_Text.value = result[1];
+}
+function Family_Address() {
+	var result = window.showModalDialog("js_19_2_Dialog_Window.htm", ['Family', 'Address']);
+ 	document.myForm.Family_Text.value = result[0];
+ 	document.myForm.Address_Text.value = result[1];
+}
+
+</script>
+
+<body>
+
+<form name="myForm">
+<input type="button" value="Name and Telephon" onClick="Name_Telephon()">
+<input type="button" value="Family and Address" onClick="Family_Address()">
+<br>Name
+<input type="text" name="Name_Text">
+<br>Family
+<input type="text" name="Family_Text">
+<br>Telephon
+<input type="text" name="Telephon_Text">
+<br>Address
+<input type="text" name="Address_Text">
+
+</form>
+
+</body>
+</html>

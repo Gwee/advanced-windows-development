@@ -1,0 +1,29 @@
+<html>
+   <body>
+      <script language="javascript">
+	var myArray= new Array();
+	myArray[0]= "11";
+	myArray[1]= 22;
+	myArray[2]= 33.333;
+	myArray.push(44);
+
+//	var myArray =["11", 22, 33.333];
+
+	for (var i= 0; i< myArray.length; i++) 
+	    document.write(myArray[i].toString() + "<br>");
+
+	var myMatr = new Array(2);
+	var counter = 1;
+        for (var i=0; i < myMatr.length; i++) {   
+	    myMatr[i] = new Array(i+2);   
+	    for (var j=0; j < myMatr[i].length; j++) 
+		myMatr[i][j] = counter ++;   
+	}
+        for (var i=0; i < myMatr.length; i++) {
+	    for (var j=0; j < myMatr[i].length; j++) 
+		document.write(myMatr[i][j].toString() + "   ");
+	    document.write("<br>");
+	}
+       </script>
+    </body>
+</html>

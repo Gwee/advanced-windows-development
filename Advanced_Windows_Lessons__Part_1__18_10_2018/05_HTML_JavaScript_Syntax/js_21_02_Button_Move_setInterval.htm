@@ -1,0 +1,33 @@
+<html>
+	<script language="javascript">
+
+var intervalID; 
+var counter = 0;
+	function myFunction() 
+	{
+	    var myButton = document.getElementById('myButton');
+	    myButton.style.pixelLeft += 5;
+	    counter ++;
+	    if( counter == 100)
+	    {
+	    	    counter = 0;
+	    	    clearInterval(intervalID);
+	    }	    
+	}
+
+			
+	function onClickFunction()
+	{
+		intervalID = setInterval(myFunction, 10); 
+	}
+	
+	</script>    
+
+
+
+	<body 
+	<form>
+		<input type="button" id="myButton" value="Click me" onclick="onClickFunction()" style="top:20; left: 20; position: absolute">
+	</form>
+	</body>
+</html>

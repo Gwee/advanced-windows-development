@@ -1,0 +1,29 @@
+<html>
+
+<script language="JavaScript">
+
+function OK_function() {
+	var firstReturnValue = document.myForm.First_Text.value;
+	var secondReturnValue = document.myForm.Second_Text.value;
+	window.returnValue = [firstReturnValue,  secondReturnValue];
+	window.close();
+}
+function onActivateFunction() {
+    document.getElementById("myLabel").innerText = "Put " + window.dialogArguments[0]+ "  and " + window.dialogArguments[1];
+}
+</script>
+
+<body>
+
+<form name="myForm"  onactivate="onActivateFunction()">
+<div id="myLabel">  </div>
+<br>
+<input type="text" id="First_Text">
+<br>
+<input type="text" id="Second_Text">
+<br>
+<input type="button" value="OK" onClick="OK_function()">
+</form>
+
+</body>
+</html>

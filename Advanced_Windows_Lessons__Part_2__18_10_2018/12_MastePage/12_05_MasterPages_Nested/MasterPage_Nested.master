@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_Nested.master.cs" Inherits="NestedMasterSecondLevel_master" MasterPageFile="~/MasterPage_Root.master"%>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="RootContent" Runat="Server">
+
+        <table width="100%">
+        <tr>
+        <td  bgcolor="blue">
+        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+        </td>
+        <td bgcolor="red">
+        <asp:contentplaceholder id="NestedContent" runat="server">
+        </asp:contentplaceholder></td>
+        </tr>
+        </table>
+
+</asp:Content>

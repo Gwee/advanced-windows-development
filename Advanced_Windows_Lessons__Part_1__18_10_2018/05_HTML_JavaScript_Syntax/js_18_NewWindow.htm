@@ -1,0 +1,28 @@
+<html>
+
+<script language="JavaScript">
+var myNewWindow;
+
+function myOpenWindow() {
+//	myNewWindow = window.open("js_11_Event_Function.htm");
+	myNewWindow = window.open("js_11_Event_Function.htm", "", 
+  		"width=600,height=200");
+}
+function myAction() {
+	myNewWindow.document.write("Hello, world!")
+}
+function myCloseWindow() {
+	myNewWindow.close();
+}
+</script>
+
+<body>
+
+<form>
+<input type="button" value="Open new window" onClick="myOpenWindow()">
+<input type="button" value="Action in new window" onClick="myAction()">
+<input type="button" value="Close new window" onClick="myCloseWindow()">
+</form>
+
+</body>
+</html>

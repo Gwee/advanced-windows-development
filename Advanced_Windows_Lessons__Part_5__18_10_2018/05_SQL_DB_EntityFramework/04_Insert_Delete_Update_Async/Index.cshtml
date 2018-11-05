@@ -1,0 +1,106 @@
+﻿@model IEnumerable<MVC_SQL_DB.Models.Employee>
+
+		<div>
+		<h2>Employees</h2>
+            <input type="button" value="Add New Employee" onclick="myInsert()"  />
+			<table border="1" id="myTable">
+				<tr>
+                    <th><p></p></th>
+                    <th><p></p></th>
+                    <th><p></p></th>                    
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Picture</th>
+					</tr>
+				@foreach (var m in Model)
+				{
+					<tr>
+                        <td><input type="hidden" id="id_@m.id" value ="@m.id" /></td>
+                        <td><input type="button" value="Delete" onClick="myDelete(this)"></td>
+                        <td><input type="button" value="Update" onClick="myUpdate(this)"></td>
+                        <td><input type="text" id="firstName_@m.id" value="@m.firstName"/></td>
+						<td><input type="text" id="lastName_@m.id" value="@m.lastName"/></td>
+						<td><img src="@m.picture"/></td>
+					</tr>
+				}
+			</table>
+		</div>
+
+<script type="text/javascript">
+
+    var xmlHttp;
+    window.onload = function(){
+        if (window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if (window.XMLHttpRequest) 
+            xmlHttp = new XMLHttpRequest();        
+    } 
+
+    function myUpdate(myBytton) {
+        rowToUpdate = myBytton.parentNode.parentNode;
+        var ID = rowToUpdate.cells[0].childNodes[0].value;
+
+        var nyJsonObject = new Object();
+        nyJsonObject.ID = ID;
+        nyJsonObject.FirstName = document.getElementById('firstName_' + ID).value;
+        nyJsonObject.LastName = document.getElementById('lastName_' + ID).value;
+
+        var myJsonStr = JSON.stringify(nyJsonObject);
+        var url = '@Url.Action("ActionUpdate", "My")';
+        xmlHttp.open("POST", url, true);
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+        xmlHttp.onreadystatechange = getResponseUpdate;
+        xmlHttp.send(myJsonStr);
+    }
+
+    function getResponseUpdate() {
+        if (xmlHttp.readyState==4) {
+            alert(xmlHttp.responseText);
+        }
+    }
+
+    var rowToDelete;
+    function myDelete(myBytton) {
+        rowToDelete = myBytton.parentNode.parentNode;
+        var ID = rowToDelete.cells[0].childNodes[0].value;
+
+        var nyJsonObject = new Object();
+        nyJsonObject.ID = ID;
+
+        var myJsonStr = JSON.stringify(nyJsonObject);
+        var url = '@Url.Action("ActionDelete", "My")';
+        xmlHttp.open("POST", url, true);
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+        xmlHttp.onreadystatechange = getResponseDelete;
+        xmlHttp.send(myJsonStr);
+    }
+    function getResponseDelete() {
+        if (xmlHttp.readyState==4) {
+            alert(xmlHttp.responseText);
+            rowToDelete.parentNode.removeChild(rowToDelete);
+        }
+    }
+    
+    function myInsert() {
+        var url = '@Url.Action("ActionInsert", "My")';
+        xmlHttp.open("GET", url, true);
+        xmlHttp.onreadystatechange = getResponseInsert;
+        xmlHttp.send();
+    }
+
+    function getResponseInsert() {
+        if (xmlHttp.readyState==4) {
+            var id = xmlHttp.responseText;
+            var table = document.getElementById("myTable");   
+            var new_row = table.rows[1].cloneNode(true);         
+            new_row.cells[0].innerHTML = '<input type="hidden" id="id_' + id + '" value="' + id + '"/>';
+            new_row.cells[3].innerHTML = '<input type="text"  id="firstName_' + id + '" value=""/>';
+            new_row.cells[4].innerHTML = '<input type="text"  id="lastName_' + id + '" value=""/>';
+            new_row.cells[5].innerHTML = '<img src=""/>';
+            table.appendChild( new_row );
+        }
+    }
+
+</script>
+
+
