@@ -1,0 +1,38 @@
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\asp -Ex1.dll.config
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\asp -Ex1.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\asp -Ex1.pdb
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\csc.exe
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\csc.exe.config
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\csc.rsp
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\csi.exe
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\csi.rsp
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.AppContext.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.Collections.Immutable.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.IO.FileSystem.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\vbc.exe
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\vbc.exe.config
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\vbc.rsp
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\VBCSCompiler.exe
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\roslyn\VBCSCompiler.exe.config
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\obj\Debug\asp -Ex1.csprojAssemblyReference.cache
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\obj\Debug\asp -Ex1.csproj.CoreCompileInputs.cache
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\obj\Debug\asp -Ex1.csproj.CopyComplete
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\obj\Debug\asp -Ex1.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\obj\Debug\asp -Ex1.pdb
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\Newtonsoft.Json.dll
+C:\Study\Third Year\Advanced_Windows\HW\asp -Ex1\asp -Ex1\bin\Newtonsoft.Json.xml
